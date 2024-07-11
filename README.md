@@ -32,8 +32,15 @@ can load a sequence of images from a tif stack in order to simulate camera
 acquisition. Alternatively, select the 'File' source to load in a saved image
 or tif stack. See CAS documentation for more details.
 
+At first use, or when changing probes, perform a Bundle Calibration in the Settings mene, by clicking 'Acquire background' and 'Calibrate Bundle'.
+
+To use with a linescan endomicroscope, ensure that `ls = True' near the top of the file. On first use, or after realignment,
+it is necessary to calibrate the linescan using the Auto Calibration button in the Line Scanning menu. For this, ensure the
+laser is on and the probe is pointing into empty space.
+
 ## Requirements
-In addition to CAS and pyfibrebundle requirements, endomicroscope requires:
-* instrumental-lib
+In addition to CAS and pyfibrebundle requirements (including drivers for the camera), for use with a linescan endomicroscope 
+using a NI DAQ, endomicroscope requires:
+* nidaqmx (National Instruments)
 
 
